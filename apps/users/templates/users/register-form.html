@@ -1,0 +1,108 @@
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <img
+      class="mx-auto h-10 w-auto"
+      src="https://i.postimg.cc/FzVM4Zhj/logo-sgep.png"
+      alt="erp system logo"
+    />
+    <h2
+      class="mt-7 text-center text-2xl font-bold leading-9 tracking-tight text-red6 text-"
+    >
+      Create an account
+    </h2>
+  </div>
+
+  <div class="mt-5 sm:mx-auto sm:w-full sm:max-w-md">
+    <form
+      class="space-y-6 sm:w-[280px]"
+      method="POST"
+    >
+      {% csrf_token %} 
+      {% comment %} {{ form.as_p }} {% endcomment %}
+
+      <div>
+        <label
+          for="username"
+          class="block text-sm font-medium leading-6 text-gray-900"
+          >Username</label
+        >
+        <div class="mt-2">
+          <input
+            id="username"
+            name="username"
+            type="text"
+            autocomplete="on"
+            required
+            class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-red6 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label
+          for="password1"
+          class="block text-sm font-medium leading-6 text-gray-900"
+          >Password</label
+        >
+        <div class="mt-2">
+          <input
+            id="password1"
+            name="password1"
+            type="password"
+            autocomplete="new-password"
+            required
+            class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-red6 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label
+          for="password2"
+          class="block text-sm font-medium leading-6 text-gray-900"
+          >Confirm password</label
+        >
+        <div class="mt-2">
+          <input
+            id="password2"
+            name="password2"
+            type="password"
+            autocomplete="new-password"
+            required
+            class="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-red6 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-end">
+        <ul class="text-xs text-gray-600 list-disc w-11/12">
+          <li class="mb-2">
+            Your password can’t be too similar to your other personal
+            information.
+          </li class="mb-2">
+          <li class="mb-2">Your password must contain at least 8 characters.</li>
+          <li class="mb-2">Your password can’t be a commonly used password.</li>
+          <li class="">Your password can’t be entirely numeric.</li>
+        </ul>
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          class="flex w-full justify-center rounded-md bg-red6 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Create account
+        </button>
+      </div>
+    </form>
+
+    <p class="mt-10 text-center text-sm text-gray-500">
+      Have an account already?
+      <a
+        href="{% url 'user-login' %}"
+        class="font-semibold leading-6 text-red6 hover:text-red4"
+        >Sign in</a
+      >
+    </p>
+  </div>
+</div>

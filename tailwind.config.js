@@ -4,31 +4,36 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'main': [
+          'Inter var, sans-serif',
+          {
+            fontFeatureSettings: '"cv02", "cv03", "cv04", "cv11"',
+            fontVariationSettings: '"opsz" 32'
+          },
+        ],
+      },
       height: {
-        100: 'calc(100vh - 177px)',
+        100: 'calc(100vh - 160px)',
       },
       minHeight: {
-        nice: 'calc(100vh - 223px)',
+        adjust: 'calc(100vh - 160px)',
         cool: 'calc(100vh - 177px)',
       },
       colors: {
-        'dark-main': '#181818',
-        'dark-bg': '#22202A',
-        'dark-second': '#242526',
-        'dark-third': '#100f14',
-        'dark-txt': '#c1c1c1',
-        dark: '#1C1D1F',
-        'fb-gray': '#f0f2f5',
-        purple: '#7C24D9',
-        'gray-footer-500': '#1C1D1F',
-        search: '#F7F9FA',
-        careers: '#FEF9F5',
-        ivory: '#F4F7F0',
-        green: 'rgb(45 212 191);',
-        misty: '#BFD2D0',
-        'purple-mid': '#A084DC',
-        azulito: '#4E4FEB',
-        'dark-azulito': '#EA5455',
+        'hard-black': '#3F3535',
+        'soft-black': '#453F3F',
+        'red1': '#f2b7b7',
+        'red2': '#e0a5a5',
+        'red3': '#cd9292',
+        'red4': '#bb8080',
+        'red5': '#a86e6e',
+        // main red
+        'red6': '#965B5B', 
+        'red7': '#834949',
+        'red8': '#773333',
+        'red9': '#590823',
+        'soft-brown': '#745E5E'
       },
       keyframes: {
         wiggle: {
@@ -99,7 +104,7 @@ module.exports = {
     },
   },
   plugins: [
-    // require('@tailwindcss/forms'),
+    require('@tailwindcss/forms'),
     // require('@tailwindcss/typography'),
     // require('@tailwindcss/line-clamp'),
     // require('@tailwindcss/aspect-ratio'),

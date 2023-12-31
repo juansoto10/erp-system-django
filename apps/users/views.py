@@ -16,7 +16,7 @@ def test(request):
 
 
 # Register a user
-def register(request):
+def user_register(request):
     
     form = CreateUserForm()
 
@@ -30,15 +30,15 @@ def register(request):
             
             messages.success(request, 'Account created successfully')
             
-            return redirect('my-login')
+            return redirect('user-login')
         
     context = {'form': form}
     
-    return render(request, 'webapp/register.html', context=context)
+    return render(request, 'users/register.html', context=context)
             
             
 # Login a user
-def my_login(request):
+def user_login(request):
     
     form = LoginForm()
     
@@ -61,7 +61,7 @@ def my_login(request):
                 
     context = {'form': form}
     
-    return render(request, 'webapp/login.html', context=context)
+    return render(request, 'users/login.html', context=context)
 
 
 # User logout
@@ -71,4 +71,16 @@ def user_logout(request):
     
     messages.success(request, 'You have logged out')
     
-    return redirect('my-login')
+    return redirect('user-login')
+
+
+# Dashboard
+
+@login_required(login_url='user-login')
+def dashboard(request):
+    
+    # all_records = Record.objects.all()
+    
+    # context = {'records': all_records}
+    
+    return render(request, 'users/dashboard.html')

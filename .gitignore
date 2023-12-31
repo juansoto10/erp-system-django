@@ -323,4 +323,6 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+tailwind_server_activation.txt
+
 # End of https://www.toptal.com/developers/gitignore/api/node

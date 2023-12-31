@@ -1,0 +1,17 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+
+<body>
+  <div class="flex-wrap">
+    <h1 class="text-blue-600 font-bold text-4xl">Hei min venn!</h1>
+    <p class="mb-6">Dette er min dashboard</p>
+
+    <a href="{% url 'user-logout' %}" class="text-blue-500">Logout</a>
+  </div>
+  
+
+  
+</body>
+
+{% endblock %}
