@@ -1,3 +1,5 @@
-from django.db import models
+"""Users app models"""
+import datetime
+import uuid
 
-# Create your models here.
+from django.db import models

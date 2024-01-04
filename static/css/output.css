@@ -1028,14 +1028,14 @@ select {
   color: rgb(234 88 12 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-red6 {
   --tw-text-opacity: 1;
   color: rgb(150 91 91 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1083,24 +1083,9 @@ select {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.hover\:bg-soft-brown:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(116 94 94 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-red5:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(168 110 110 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-red4:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(187 128 128 / var(--tw-bg-opacity));
-}
-
-.hover\:text-soft-brown:hover {
-  --tw-text-opacity: 1;
-  color: rgb(116 94 94 / var(--tw-text-opacity));
 }
 
 .hover\:text-red4:hover {

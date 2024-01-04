@@ -50,6 +50,7 @@ DJANGO_APPS = [
 PROJECT_APPS = [
     'apps.production',
     'apps.users',
+    'apps.category',
 ]
 
 THIRD_PARTY_APPS = []
