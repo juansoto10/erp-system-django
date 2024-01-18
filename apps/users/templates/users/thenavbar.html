@@ -1,11 +1,11 @@
-<nav class="shadow-inner">
+<nav class="shadow-inner fixed w-full z-20 bg-white">
   <div class="dark:bg-hard-black border-b dark:border-none text-red6 font-bold h-[80px] w-100 flex flex-row justify-between items-center px-9 py-6">
     <div class="flex items-center">
       <a class="" href="{% url 'user-login' %}">
         <img class="h-6" src="https://i.postimg.cc/FzVM4Zhj/logo-sgep.png" alt="erp system logo">
       </a>
       <a
-      class="text-xl leading-none ml-3 hover:text-red4"
+      class="text-xl leading-none ml-3 hover:text-red4 transition"
       href="{% url 'user-login' %}"
       >ERP System</a
       >
@@ -14,14 +14,14 @@
 
     <div class="flex justify-around items-center">
       <a
-        class="pr-3 leading-none hover:text-red4"
+        class="pr-3 leading-none hover:text-red4 transition"
         href="{% url 'user-login' %}"
         >About</a
       >
 
-      <button id="toggle-theme" class="pl-3 leading-none hover:text-red4 flex items-center">
+      <button id="toggle-theme" class="pl-3 leading-none hover:text-red4 flex items-center transition">
         <ion-icon name="moon" class="text-xl"></ion-icon>
-        {% comment %} <ion-icon name="sunny" class="text-xl"></ion-icon> {% endcomment %}
+        <ion-icon name="sunny" class="text-xl"></ion-icon>
       </button>
     </div>
   </div>

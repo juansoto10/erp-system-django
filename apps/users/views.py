@@ -74,13 +74,12 @@ def user_logout(request):
     return redirect('user-login')
 
 
-# Dashboard
-
-@login_required(login_url='user-login')
-def dashboard(request):
+# # Dashboard
+# @login_required(login_url='user-login')
+# def dashboard(request):
     
-    # all_records = Record.objects.all()
+#     # all_records = Record.objects.all()
     
-    # context = {'records': all_records}
+#     # context = {'records': all_records}
     
-    return render(request, 'users/dashboard.html')
+#     return render(request, 'users/dashboard.html')

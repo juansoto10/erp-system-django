@@ -15,10 +15,11 @@ module.exports = {
       },
       height: {
         100: 'calc(100vh - 160px)',
+        fill: 'calc(100vh - 80px)',
       },
       minHeight: {
-        adjust: 'calc(100vh - 160px)',
-        cool: 'calc(100vh - 177px)',
+        adjust: 'calc(100vh - 80px)',
+        cool: 'calc(100vh - 160px)',
       },
       colors: {
         'hard-black': '#3F3535',

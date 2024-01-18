@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/output.css' %}">
-  <title>Production Index</title>
+  <title>Django ERP System</title>
 </head>
-<body class="font-main">
+<body class="font-main dark:bg-stone-800">
   <div class="">
     {% include 'users/thenavbar.html' %}
 
-    <main class="flex justify-center items-center px-5 min-h-adjust">
+    <main class="flex justify-center items-center min-h-adjust dark:bg-stone-800 pt-[80px]">
       {% block content %}
 
       {% endblock %}
