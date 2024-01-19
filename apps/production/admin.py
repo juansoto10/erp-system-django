@@ -1,3 +1,6 @@
+"""
+Producion app admin
+"""
 from django.contrib import admin
 
 from .models import *
@@ -31,7 +34,7 @@ class ProductAdmin(admin.ModelAdmin):
     date_hierarchy = 'added'
     
 
-class ProductsInline(admin.StackedInline):
+class ProductsInline(admin.TabularInline):
     
     model = ProductionDetail
     extra = 7

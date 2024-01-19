@@ -10,6 +10,30 @@
       <h1 class="text-blue-600 font-bold text-4xl">Hei min venn!</h1>
       <p class="mb-6">Dette er min dashboard</p>
 
+      <ul class="mb-4">
+        {% for item in items %}
+          <li>{{item}}</li>
+        {% endfor %}
+      </ul>
+
+      <ul class="mb-4">
+        {% for product in products %}
+          <li>{{ product.name }}:
+              <ul>
+                  {% for component in product.component_set.all %}
+                      <li>{{ component.item.name }} - Amount: {{ component.amount }}</li>
+                  {% endfor %}
+              </ul>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <ul>
+        {% for production in productions %}
+          <li>{{production}}</li>
+        {% endfor %}
+      </ul>
+      
       <a href="{% url 'user-logout' %}" class="text-blue-500">Logout</a>
     </div>
     
